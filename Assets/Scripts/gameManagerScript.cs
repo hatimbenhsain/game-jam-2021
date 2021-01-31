@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class gameManagerScript : MonoBehaviour
 {
@@ -98,15 +99,23 @@ public class gameManagerScript : MonoBehaviour
 	   	}else{
 	   		victoryStuff.GetComponent<Animator>().SetBool("victory",true);
 	   		soundManager.win=true;
+            StartCoroutine(nextScene());
 	   	}
     }
 
     void doingTheWash(){
     	StartCoroutine(machineAnimation(animationTime));
+
     	//change level layout
     	
     }
     
+    IEnumerator nextScene(){
+        yield return new WaitForSeconds(6f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
+
+    }
+
     IEnumerator machineAnimation(float waitTime){
     	CRrunning=true;
     	soundManager.Wash();
@@ -131,38 +140,63 @@ public class gameManagerScript : MonoBehaviour
 
         //remake level
         //delete everything with tag floorTile obj out
-        GameObject[] temp = GameObject.FindGameObjectsWithTag("floorTile");
-        for (int x = 0; x < temp.Length; x++)
-        {
-            Destroy(temp[x]);
-        }
-        GameObject[] temp1 = GameObject.FindGameObjectsWithTag("obj");
-        for (int x = 0; x < temp1.Length; x++)
-        {
-            Destroy(temp1[x]);
-        }
-        GameObject[] temp2 = GameObject.FindGameObjectsWithTag("out");
-        for (int x = 0; x < temp2.Length; x++)
-        {
-            Destroy(temp2[x]);
-        }
-        //pathmaker return box collider
-        GameObject[] temp3 = GameObject.FindGameObjectsWithTag("pathmaker");
-        for (int i = 0; i < temp3.Length; i++)
-        {
-            temp3[i].GetComponent<BoxCollider2D>().enabled = true;
-        }
-        //re-run pathmaker skript
-        Debug.Log(path.GetComponent<pathManager>().end);
-        Destroy(path.GetComponent<pathManager>()); //toggle this script to re-invoke it
-        path.AddComponent<pathManager>();
-        Debug.Log(path.GetComponent<pathManager>().end);
-        path.GetComponent<pathManager>().end = false;
-        // for(float i=0f;i<=waitTime/6;i+=Time.deltaTime){
-        // 	scale=Vector3.Lerp(rect.localScale,Vector3.zero,growthRate*10);
-        // 	rect.localScale=scale;
-        // 	yield return new WaitForSeconds(Time.deltaTime);
-        // }
+        // GameObject[] temp = GameObject.FindGameObjectsWithTag("floorTile");
+        // for (int x = 0; x < temp.Length; x++)
+
+        // {
+
+        //     Destroy(temp[x]);
+
+        // }
+        // GameObject[] temp1 = GameObject.FindGameObjectsWithTag("obj");
+        // for (int x = 0; x < temp1.Length; x++)
+
+        // {
+
+        //     Destroy(temp1[x]);
+
+        // }
+        // GameObject[] temp2 = GameObject.FindGameObjectsWithTag("out");
+        // for (int x = 0; x < temp2.Length; x++)
+
+        // {
+
+        //     Destroy(temp2[x]);
+
+        // }
+        // //pathmaker return box collider
+        // GameObject[] temp3 = GameObject.FindGameObjectsWithTag("pathmaker");
+
+        // for (int i = 0; i < temp3.Length; i++)
+
+        // {
+
+        //     temp3[i].GetComponent<BoxCollider2D>().enabled = true;
+
+        // }
+
+        // //re-run pathmaker skript
+
+        // Debug.Log(path.GetComponent<pathManager>().end);
+
+        // Destroy(path.GetComponent<pathManager>()); //toggle this script to re-invoke it
+
+        // path.AddComponent<pathManager>();
+
+        // Debug.Log(path.GetComponent<pathManager>().end);
+
+        // path.GetComponent<pathManager>().end = false;
+
+        // for(float i=0f;i<=waitTime/6;i+=Time.deltaTime){
+
+        // 	scale=Vector3.Lerp(rect.localScale,Vector3.zero,growthRate*10);
+
+        // 	rect.localScale=scale;
+
+        // 	yield return new WaitForSeconds(Time.deltaTime);
+
+        // }
+
         washImage.enabled=false;
     	CRrunning=false;
     	soundManager.StopWash();
