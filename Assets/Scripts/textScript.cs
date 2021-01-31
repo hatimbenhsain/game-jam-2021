@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -89,7 +89,6 @@ public class textScript : MonoBehaviour
 
         if(mouse.leftButton.wasPressedThisFrame){
         	if(lettersSpoken>=messages[currentMessage-1].Length && currentMessage<messages.Length){
-
             	currentMessage++;
                 lettersSpoken=0;
 
@@ -104,6 +103,7 @@ public class textScript : MonoBehaviour
                 lettersSpoken=messages[currentMessage-1].Length;
             }else{
                 canvas.enabled=false;
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1, LoadSceneMode.Single);
             }
         }
 
