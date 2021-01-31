@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2371237507901168646}
   - component: {fileID: 2371237507901168665}
   - component: {fileID: 2371237507901168643}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: dust
   m_TagString: obj
   m_Icon: {fileID: 0}

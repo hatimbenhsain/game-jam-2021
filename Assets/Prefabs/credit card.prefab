@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2997404678210519304}
   - component: {fileID: 2997404678210519303}
   - component: {fileID: 2997404678210519302}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: credit card
   m_TagString: obj
   m_Icon: {fileID: 0}

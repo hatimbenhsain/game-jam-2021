@@ -57,7 +57,11 @@ PrefabInstance:
       objectReference: {fileID: 4155468559368760040, guid: a9ce4df3ed9552940b8ee2dd781800b4, type: 3}
     - target: {fileID: 1200946338721340751, guid: c8dc3b1c46b9044458e990f4008c12dc, type: 3}
       propertyPath: m_Name
-      value: vertical_bridge
+      value: bridge_vertical
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200946338721340751, guid: c8dc3b1c46b9044458e990f4008c12dc, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8dc3b1c46b9044458e990f4008c12dc, type: 3}

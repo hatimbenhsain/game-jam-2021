@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7499126872312259410}
   - component: {fileID: 7499126872312259411}
   - component: {fileID: 5490234651458040181}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: clip
   m_TagString: obj
   m_Icon: {fileID: 0}

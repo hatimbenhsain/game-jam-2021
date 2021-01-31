@@ -31,7 +31,7 @@ public class pathManager : MonoBehaviour {
 	public int roomSize=30;
 	public int corridorSize=20;
 	public bool roomMode=true;
-	bool end=false;
+	public bool end=false;
     int z = 0;
 
     private float originalProb;
@@ -90,6 +90,7 @@ public class pathManager : MonoBehaviour {
 					GameObject newFloor;
 					newFloor=Instantiate(floorPrefab,transform.position,new Quaternion(0,0,0,0),transform.parent);
                     newFloor.name = "floor"+z;
+                    //newFloor.transform.parent = gameObject.transform;
                     z++;
 					positions=positions+transform.position;
 					floorAdded=true;

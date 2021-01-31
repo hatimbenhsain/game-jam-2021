@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5164212512693323310}
   - component: {fileID: 5164212512693323311}
   - component: {fileID: 2855197822169018794}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: soap
   m_TagString: obj
   m_Icon: {fileID: 0}
