@@ -11,6 +11,9 @@ public class soundManagerScript : MonoBehaviour
 	public float lerpValue2=0.5f;
 
 	private bool washing=false;
+
+	public bool win=false;
+	public AudioSource winSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +31,11 @@ public class soundManagerScript : MonoBehaviour
         	washSound.volume=Mathf.Lerp(washSound.volume,0f,lerpValue2);
         	bgMusic.volume=Mathf.Lerp(bgMusic.volume,1f,lerpValue2);
         	if(washSound.volume<=0.01f) washSound.Stop();
+        }
+        if(win && !winSound.isPlaying){
+        	winSound.Play();
+        	bgMusic.Stop();
+        	washSound.Stop();
         }
     }
 
