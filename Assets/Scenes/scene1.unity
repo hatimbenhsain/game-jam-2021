@@ -1095,11 +1095,26 @@ MonoBehaviour:
   canvas2: {fileID: 115890738}
   inZone: 0
   messages:
-  - 'Are you okay sister? '
-  - I have been looking for you!
-  - I'm.. fine.
-  - I'm glad.
-  changeSpeaker: 0200000004000000
+  - SOCKOLOOOOOOOOOOOOOV!
+  - "Stay yonder, stinky one! Your stench still lingers from yesterday\u2019s soccer
+    game. "
+  - "But\u2026you too!"
+  - Nonsense.
+  - What is this place anyway?
+  - hehe.. it smells like cleaning juice.
+  - '*sniff sniff*'
+  - Indeed. Must be the promised land of the arisockracy!
+  - Sockolov...
+  - Yes dear?
+  - "You\u2019ve had too much cleaning juice, hehe "
+  - 'Perhaps it is you who has had too much! '
+  - Hear that hideous growling sound coming from your stomach!
+  - "That\u2019s not my stomach! "
+  - "It's\u2014"
+  - ...Sockolov?
+  - ...Sockoko?
+  - I think we're socked.
+  changeSpeaker: 0200000003000000040000000600000008000000090000000a0000000b0000000c0000000f0000001000000011000000
   currentMessage: 0
   portrait1: {fileID: 1602442916}
   portrait2: {fileID: 2089285431}

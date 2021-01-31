@@ -1095,11 +1095,22 @@ MonoBehaviour:
   canvas2: {fileID: 115890738}
   inZone: 0
   messages:
-  - 'Are you okay sister? '
-  - I have been looking for you!
-  - I'm.. fine.
-  - I'm glad.
-  changeSpeaker: 0200000004000000
+  - "Though I\u2019m not fond of all the twisting and spinning..."
+  - I do appreciate the regularity of these baths, see how my threads are now rid
+    of your filth!
+  - 'I want to go back home. '
+  - ...
+  - 'Do you think he misses us? '
+  - 'Why, of course he does! Have you seen anyone else wear party socks to football
+    matches! '
+  - "\u2026"
+  - "\u2026"
+  - Well ponder this a bit, is it not the greatest honor to share the realm of the
+    holy mother?
+  - 'Washed every minute, rather than wait for the filthy human to run out of underwear. '
+  - Sockoko?
+  - ...maybe.
+  changeSpeaker: 010000000300000004000000050000000600000007000000080000000c0000000d000000
   currentMessage: 0
   portrait1: {fileID: 1602442916}
   portrait2: {fileID: 2089285431}

@@ -1095,11 +1095,22 @@ MonoBehaviour:
   canvas2: {fileID: 115890738}
   inZone: 0
   messages:
-  - 'Are you okay sister? '
-  - I have been looking for you!
-  - I'm.. fine.
-  - I'm glad.
-  changeSpeaker: 0200000004000000
+  - SOCKOLOOOOOOOOOOOOOV!
+  - Oh will you stop shouting!
+  - blurgh!
+  - YOU WENCH! YOU WILL DIE FOR STAINING MY FINE SILK THREADS!
+  - "hehe, Shanty says we\u2019re 100% cotton!"
+  - "WELL HE\u2019S A LIAR."
+  - Humans lie all the time.
+  - 'ooooh... ...deep! '
+  - Flee! The holy mother comes again!
+  - The washing machine!
+  - Blasphemy! Watch your word Sockoko!
+  - "hehe, that\u2019s what Shanty calls her"
+  - Ungodly humans and their ungodly names.
+  - You like him though!
+  - "I\u2014"
+  changeSpeaker: 02000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e000000
   currentMessage: 0
   portrait1: {fileID: 1602442916}
   portrait2: {fileID: 2089285431}

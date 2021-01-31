@@ -1095,11 +1095,17 @@ MonoBehaviour:
   canvas2: {fileID: 115890738}
   inZone: 0
   messages:
-  - 'Are you okay sister? '
-  - I have been looking for you!
-  - I'm.. fine.
-  - I'm glad.
-  changeSpeaker: 0200000004000000
+  - SOCKOLOOOOOOOOOOOOOV!
+  - Quiet! My head aches from all this spinning.
+  - "I don\u2019t know how to moooooove... "
+  - "Idiot, watch and learn, squeeze then stretch as I do and\u2014 "
+  - '*falls*'
+  - hehe...
+  - 'Mother of socks! All this spinning must have tangled our threads! '
+  - Hmmmmm...
+  - Let's leave before it gets worse!
+  - 'Brilliant Sockoko! Truly brilliant. '
+  changeSpeaker: 0200000003000000040000000600000007000000080000000a000000
   currentMessage: 0
   portrait1: {fileID: 1602442916}
   portrait2: {fileID: 2089285431}
