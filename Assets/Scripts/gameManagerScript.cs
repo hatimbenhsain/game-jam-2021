@@ -112,7 +112,7 @@ public class gameManagerScript : MonoBehaviour
     
     IEnumerator nextScene(){
         yield return new WaitForSeconds(6f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1, LoadSceneMode.Single);
 
     }
 
