@@ -27,7 +27,7 @@ public class gameManagerScript : MonoBehaviour
 	private float alpha=0.5f;
 	private Color c;
 
-	public float timeLimit=60f;
+	public float timeLimit=30f;
 	public float preWashTime=5f;
 	public soundManagerScript soundManager;
 	public float currentTime;

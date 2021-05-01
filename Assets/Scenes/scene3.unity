@@ -847,11 +847,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d932547fa858a904f9022ef516b78b7e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4f1e083bd05ba474e9c5c3ad4d931605, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1229,15 +1229,16 @@ MonoBehaviour:
   - "hehe, Shanty says we\u2019re 100% cotton!"
   - "WELL HE\u2019S A LIAR."
   - Humans lie all the time.
-  - 'ooooh... ...deep! '
+  - ooooh...
+  - ...deep!
   - Flee! The holy mother comes again!
-  - The washing machine!
+  - THE WASHING MACHINE!!
   - Blasphemy! Watch your word Sockoko!
-  - "hehe, that\u2019s what Shanty calls her"
+  - "hehe, that\u2019s what Shanty calls her!"
   - Ungodly humans and their ungodly names.
-  - You like him though!
-  - "I\u2014"
-  changeSpeaker: 02000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e000000
+  - Blabla! You know you like Shanty!
+  - "...I\u2014"
+  changeSpeaker: 0200000003000000040000000500000006000000080000000a0000000b0000000c0000000d0000000e0000000f00000010000000
   currentMessage: 0
   portrait1: {fileID: 1602442916}
   portrait2: {fileID: 2089285431}

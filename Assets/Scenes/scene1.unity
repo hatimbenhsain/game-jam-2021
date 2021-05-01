@@ -585,9 +585,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d932547fa858a904f9022ef516b78b7e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1241,7 +1241,7 @@ MonoBehaviour:
   - ...Sockolov?
   - ...Sockoko?
   - I think we're socked.
-  changeSpeaker: 0200000003000000040000000600000008000000090000000a0000000b0000000c0000000f0000001000000011000000
+  changeSpeaker: 0200000003000000040000000600000008000000090000000a0000000b0000000c0000000e0000000f0000001000000011000000
   currentMessage: 0
   portrait1: {fileID: 1602442916}
   portrait2: {fileID: 2089285431}
@@ -1277,7 +1277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: bb75574d17570564f965d620ff716651, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: f51bf3f21c117734588f49bab9e160e7, type: 3}
   m_NotificationBehavior: 0
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -1344,7 +1344,7 @@ MonoBehaviour:
     m_ActionName: UI/TrackedDeviceOrientation
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
+  m_DefaultActionMap: main
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!1 &1602442916

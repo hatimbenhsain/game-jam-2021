@@ -1095,10 +1095,10 @@ MonoBehaviour:
   canvas2: {fileID: 115890738}
   inZone: 0
   messages:
-  - Holy Mother! It is her!
-  - "Washing Machine: \u2026?"
+  - 'Holy Mother: ...'
+  - Holy Mother it is her!
   - "He\u2019s not right in the head ma\u2019am! Too much cleaning juice. "
-  - 'Washing Machine: ...why have you come here?'
+  - 'Washing Machine: ...you have come seeking me. State your purpose.'
   - Your holiness, we must come back to our owner.
   - 'Washing Machine: Why?'
   - "I\u2026"
@@ -1118,9 +1118,7 @@ MonoBehaviour:
   - "So that they\u2019re never lonely?"
   - 'Washing Machine: Neither. It is because one must be lost, so that the other
     may be found.'
-  - ' oh!'
-  - ...deep!
-  changeSpeaker: 010000000300000005000000130000000b0000000d0000000f00000011000000120000000c00000014000000150000001600000017000000
+  changeSpeaker: 0200000003000000050000000600000007000000090000000c0000000d0000000f000000100000001200000013000000140000001500000016000000
   currentMessage: 0
   portrait1: {fileID: 1602442916}
   portrait2: {fileID: 2089285431}
@@ -1382,9 +1380,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 780440b1c2b3b5446a38444b373acc4a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

@@ -1005,11 +1005,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 91df37f44474ed043946dfad422a8f73, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 780440b1c2b3b5446a38444b373acc4a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1222,6 +1222,7 @@ MonoBehaviour:
   canvas2: {fileID: 115890738}
   inZone: 0
   messages:
+  - ...Sockolov?
   - "Though I\u2019m not fond of all the twisting and spinning..."
   - I do appreciate the regularity of these baths, see how my threads are now rid
     of your filth!
@@ -1235,9 +1236,9 @@ MonoBehaviour:
   - Well ponder this a bit, is it not the greatest honor to share the realm of the
     holy mother?
   - 'Washed every minute, rather than wait for the filthy human to run out of underwear. '
-  - Sockoko?
+  - ...Sockoko?
   - ...maybe.
-  changeSpeaker: 010000000300000004000000050000000600000007000000080000000c0000000d000000
+  changeSpeaker: 020000000400000005000000060000000700000008000000090000000d0000000e000000
   currentMessage: 0
   portrait1: {fileID: 1602442916}
   portrait2: {fileID: 2089285431}

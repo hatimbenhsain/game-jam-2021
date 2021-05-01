@@ -58,8 +58,8 @@ public class events : MonoBehaviour
         }
         if (sqTouch==true)
         {
-            StopCoroutine("flip_screen");
-            StartCoroutine("flip_screen");
+            //StopCoroutine("flip_screen");
+            //StartCoroutine("flip_screen");
             sqTouch = false;
         }
     }

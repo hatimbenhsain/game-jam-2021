@@ -40,7 +40,7 @@ public class textScript : MonoBehaviour
     {
         playerActionControl = new TwoPlayerActionControl();
         canvas=canvas1;
-        canvas.enabled=true;
+        canvas.enabled=false;
         canvas2.enabled=false;
         currentMessage=1;
         int i=0;
@@ -67,7 +67,6 @@ public class textScript : MonoBehaviour
 
     public void UpdateText(){
         var mouse=Mouse.current;
-        if(mouse.leftButton.wasPressedThisFrame) print("pressed");
         for(int i=0;i<changeSpeaker.Length;i++){
             if(changeSpeaker[i]==currentMessage){
                 if(canvas==canvas1){
@@ -85,12 +84,23 @@ public class textScript : MonoBehaviour
                 }
                 changeSpeaker[i]=0;
                 break;
+            }else if (currentMessage == 1){
+                canvas = canvas1;
+                canvas2.enabled = false;
+                canvas.enabled = true;
+                portrait1.transform.SetSiblingIndex(3);
+                portrait2.transform.SetSiblingIndex(1);
             }
         }
 
         if(mouse.leftButton.wasPressedThisFrame){
-        	if(lettersSpoken>=messages[currentMessage-1].Length && currentMessage<messages.Length){
-            	currentMessage++;
+            print("pressed");
+            if (lettersSpoken>=messages[currentMessage-1].Length && currentMessage<messages.Length){
+                if (canvas.enabled)
+                {
+                    currentMessage++;
+                }
+            	
                 lettersSpoken=0;
 
             	if(currentMessage<=messages.Length){
