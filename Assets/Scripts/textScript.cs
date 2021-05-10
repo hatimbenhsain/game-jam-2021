@@ -18,8 +18,11 @@ public class textScript : MonoBehaviour
 	public string[] messages;
 	public int[] changeSpeaker;
 	public int currentMessage;
+
+    //portraits
 	public GameObject portrait1;
     public GameObject portrait2;
+
     public GameObject itemUsed=null;
     public GameObject thoughtBubble=null;
 
@@ -33,7 +36,7 @@ public class textScript : MonoBehaviour
     public bool isNpc=true;
     string spokenMessage="";
     float lettersSpoken=0f;
-    public float textSpeed=0.2f;
+    public float textSpeed=0.6f;
     public bool resolved=false;
 
     void Awake()
@@ -42,7 +45,8 @@ public class textScript : MonoBehaviour
         canvas=canvas1;
         canvas.enabled=false;
         canvas2.enabled=false;
-        currentMessage=1;
+
+        currentMessage =1;
         int i=0;
 
         //typingSound=canvas.GetComponent<AudioSource>().clip;
