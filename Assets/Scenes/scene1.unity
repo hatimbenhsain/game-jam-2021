@@ -1249,7 +1249,7 @@ MonoBehaviour:
   thoughtBubble: {fileID: 0}
   speechSound: {fileID: 0}
   isNpc: 1
-  textSpeed: 0.1
+  textSpeed: 0.6
   resolved: 0
 --- !u!4 &1577041944
 Transform:
