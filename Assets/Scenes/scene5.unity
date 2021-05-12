@@ -538,7 +538,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 72dbbace97784474db0dce6c4118b269, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e51cf368053f0432698277decf41c71f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -857,15 +857,15 @@ MonoBehaviour:
   - How about you, orange one. Why do you wish to leave?
   - I miss Shanty!
   - Ridiculous, your selfish reasons will not convince the holy mother!
-  - ery well. You may leave. But this one will stay.
+  - Very well. You may leave. But this one will stay.
   - hehe..?
   - Pardon?
   - Do you two know why socks are made in pairs?
   - Surely it is because humans are bipedal, your holiness.
   - "So that they\u2019re never lonely?"
   - Neither. It is because one must be lost, so that the other may be found.
-  changeSpeaker: 020000000300000004000000050000000600000007000000090000000c0000000d0000000f0000001000000012000000130000001500000016000000
-  changeSpeakerWhich: 010000000000000002000000010000000200000001000000020000000100000002000000010000000200000001000000030000000200000002000000
+  changeSpeaker: 020000000300000004000000050000000600000007000000090000000c0000000d0000000f000000100000001200000013000000140000001500000016000000
+  changeSpeakerWhich: 01000000000000000200000001000000020000000100000002000000000000000100000002000000000000000100000002000000000000000100000002000000
   currentMessage: 0
   portrait1: {fileID: 1602442916}
   portrait2: {fileID: 2089285431}
@@ -1155,7 +1155,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -87, y: -534}
+  m_AnchoredPosition: {x: -100, y: -534}
   m_SizeDelta: {x: 1156.023, y: 294.1225}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1074089217
@@ -1394,7 +1394,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 50, y: -310}
+  m_AnchoredPosition: {x: 50, y: -320}
   m_SizeDelta: {x: 349.2829, y: 78.3315}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1154066442
@@ -1419,7 +1419,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 2125cb9691aec934a851b917f2139440, type: 3}
-    m_FontSize: 70
+    m_FontSize: 59
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
@@ -1556,7 +1556,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 221, y: -512.3}
+  m_AnchoredPosition: {x: 210, y: -512.3}
   m_SizeDelta: {x: 1140.9048, y: 304.7314}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1482158678
