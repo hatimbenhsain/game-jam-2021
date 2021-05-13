@@ -154,6 +154,7 @@ public class gameManagerScript : MonoBehaviour
         GameObject[] temp = GameObject.FindGameObjectsWithTag("floorTile");
         Transform tempPos1 = temp[4].GetComponent<Transform>();
         Transform tempPos2 = temp[10].GetComponent<Transform>();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         //remake level
         //delete everything with tag floorTile obj out
         // GameObject[] temp = GameObject.FindGameObjectsWithTag("floorTile");
@@ -269,7 +270,11 @@ public class gameManagerScript : MonoBehaviour
 
     void Uncover(int a)
     {
-            playerKeys[a].sprite = keySprites2[a];
-            Debug.Log("mok");
+        if (playerKeys[a].sprite == questionSprite)
+        {
+            soundManager.sfx();Debug.Log("mok");
+        }
+        playerKeys[a].sprite = keySprites2[a];
     }
+            
 }

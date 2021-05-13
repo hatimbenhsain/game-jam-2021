@@ -48,8 +48,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   washSound: {fileID: 2039514958}
   bgMusic: {fileID: 1901121763}
+  winSound: {fileID: 0}
   lerpValue1: 0.01
   lerpValue2: 0.5
+  win: 0
 --- !u!82 &1901121763
 AudioSource:
   m_ObjectHideFlags: 0
@@ -341,6 +343,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   keySprites: []
+  keySprites2: []
   questionSprite: {fileID: 0}
   timeLimit: 60
   preWashTime: 2
@@ -350,3 +353,4 @@ MonoBehaviour:
   timer: {fileID: 0}
   victory: 0
   victoryStuff: {fileID: 0}
+  path: {fileID: 0}

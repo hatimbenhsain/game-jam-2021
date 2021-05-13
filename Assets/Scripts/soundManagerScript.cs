@@ -6,14 +6,16 @@ public class soundManagerScript : MonoBehaviour
 {
 	public AudioSource washSound;
 	public AudioSource bgMusic;
+    public AudioSource winSound;
+    public AudioSource uncoverSound;
 
-	public float lerpValue1=0.01f;
+    public float lerpValue1=0.01f;
 	public float lerpValue2=0.5f;
 
 	private bool washing=false;
 
 	public bool win=false;
-	public AudioSource winSound;
+	
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +44,12 @@ public class soundManagerScript : MonoBehaviour
     public void Wash(){
     	washing=true;
     	washSound.Play();
+    }
+
+    public void sfx()
+    {
+        uncoverSound.Play();
+        Debug.Log("mok");
     }
 
     public void StopWash(){
