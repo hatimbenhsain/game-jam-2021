@@ -18,16 +18,16 @@ public class gameManagerScript : MonoBehaviour
 
 	private string[] keys={"w","s","a","d","upArrow","downArrow","leftArrow","rightArrow"};
 	public Image[] playerKeys;
-	public Sprite[] keySprites;
-	public Sprite questionSprite;
+    public Sprite[] keySprites;
+    public Sprite[] keySprites2;
+    public Sprite questionSprite;
 
 
 	private bool CRrunning=false;
-
 	private float alpha=0.5f;
 	private Color c;
 
-	public float timeLimit=30f;
+	public float timeLimit=15f;
 	public float preWashTime=5f;
 	public soundManagerScript soundManager;
 	public float currentTime;
@@ -44,7 +44,8 @@ public class gameManagerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-    	soundManager=FindObjectOfType<soundManagerScript>();
+        
+        soundManager =FindObjectOfType<soundManagerScript>();
     	startTime=Time.time;
         washImage=washingMachine.GetComponent<Image>();
         
@@ -52,21 +53,25 @@ public class gameManagerScript : MonoBehaviour
 
         rect=washingMachine.GetComponent<RectTransform>();
         rect.localScale=new Vector3(0f,0f,0f);
-
-        keySprites=new Sprite[8];
+        
+        keySprites =new Sprite[8];
         for(int i=0;i<8;i++){
-        	keySprites[i]=playerKeys[i].sprite;
+            keySprites2[i] = playerKeys[i].sprite;
+            keySprites[i] = playerKeys[i].sprite;
+            playerKeys[i].sprite = questionSprite;
         }
+        RandomizeKeys();
 
-        c=new Color(1f,1f,1f,alpha);
+        c =new Color(1f,1f,1f,alpha);
         timer.speed=1/timeLimit;
+        
 
     }
 
     // Update is called once per frame
     void Update()
     {
-    	currentTime=Time.time-startTime;
+        currentTime =Time.time-startTime;
 
     	if(!victory){
 	    	if(Time.time>startTime+timeLimit-preWashTime && !CRrunning){
@@ -84,17 +89,26 @@ public class gameManagerScript : MonoBehaviour
 	        	//print(keys[i]);
 	        	if(keys[i].Length>1){
 	        		if(keys[i]=="upArrow" && keyboard.upArrowKey.isPressed){
-	        			playerKeys[i].color=Color.white;
-	        		}else if(keys[i]=="downArrow" && keyboard.downArrowKey.isPressed){
-	        			playerKeys[i].color=Color.white;
-	        		}else if(keys[i]=="leftArrow" && keyboard.leftArrowKey.isPressed){
-	        			playerKeys[i].color=Color.white;
-	        		}else if(keys[i]=="rightArrow" && keyboard.rightArrowKey.isPressed){
-	        			playerKeys[i].color=Color.white;
-	        		}
+                        playerKeys[i].color=Color.white;
+                        Uncover(i);
+                    }
+                    else if(keys[i]=="downArrow" && keyboard.downArrowKey.isPressed){
+                        playerKeys[i].color=Color.white;
+                        Uncover(i);
+                    }
+                    else if(keys[i]=="leftArrow" && keyboard.leftArrowKey.isPressed){
+                        playerKeys[i].color=Color.white;
+                        Uncover(i);
+                    }
+                    else if(keys[i]=="rightArrow" && keyboard.rightArrowKey.isPressed){
+                        playerKeys[i].color=Color.white;
+                        Uncover(i);
+                    }
 	        	}else if(keyboard.FindKeyOnCurrentKeyboardLayout(keys[i]).isPressed){
-	        		playerKeys[i].color=Color.white;
-	        	}
+                    Uncover(i); 
+                    
+                    playerKeys[i].color = Color.white;
+                }
 	        }
 	   	}else{
 	   		victoryStuff.GetComponent<Animator>().SetBool("victory",true);
@@ -137,7 +151,9 @@ public class gameManagerScript : MonoBehaviour
     		yield return new WaitForSeconds(Time.deltaTime);
     	}
     	RandomizeKeys();
-
+        GameObject[] temp = GameObject.FindGameObjectsWithTag("floorTile");
+        Transform tempPos1 = temp[4].GetComponent<Transform>();
+        Transform tempPos2 = temp[10].GetComponent<Transform>();
         //remake level
         //delete everything with tag floorTile obj out
         // GameObject[] temp = GameObject.FindGameObjectsWithTag("floorTile");
@@ -227,17 +243,33 @@ public class gameManagerScript : MonoBehaviour
          }
          for (int k = 0; k < keys.Length; k++) {
              int l = Random.Range(0, indexes.Count);
+            //pick random index
              int rnd=indexes[l];
+
+            //store key value
              tempString = keys[rnd];
+
+            //assign random key value
              keys[rnd] = keys[k];
+
+
              keys[k] = tempString;
+
+            //store random sprite
              tempSprite = keySprites[rnd];
+            //assign random sprite
              keySprites[rnd] = keySprites[k];
              keySprites[k] = tempSprite;
-             playerKeys[k].sprite=keySprites[k];
-             indexes.RemoveAt(0);
+
+            keySprites2[k] = keySprites[k];
+            playerKeys[k].sprite = questionSprite;
+            indexes.RemoveAt(0);
          }
      }
 
-
+    void Uncover(int a)
+    {
+            playerKeys[a].sprite = keySprites2[a];
+            Debug.Log("mok");
+    }
 }
