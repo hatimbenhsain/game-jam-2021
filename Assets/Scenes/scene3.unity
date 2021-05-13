@@ -1242,6 +1242,17 @@ MonoBehaviour:
   currentMessage: 0
   portrait1: {fileID: 1602442916}
   portrait2: {fileID: 2089285431}
+  changePortrait1: 0300000004000000
+  changePortrait2: 03000000
+  portrait1Which: 0200000000000000
+  portrait2Which: 05000000
+  portraits:
+  - {fileID: 1158276266674575106, guid: f6b6877fe338b9844b7e2611742edcbd, type: 3}
+  - {fileID: -8390018941603478200, guid: 74784fa5ad96c4d2d9e45f16a1d28b2c, type: 3}
+  - {fileID: -6413601428941455604, guid: 751bf172242ab4cd49038014bf8a131e, type: 3}
+  - {fileID: -2723468402117249207, guid: f6b6877fe338b9844b7e2611742edcbd, type: 3}
+  - {fileID: -1685744423504591634, guid: 74784fa5ad96c4d2d9e45f16a1d28b2c, type: 3}
+  - {fileID: 591621629830723591, guid: 751bf172242ab4cd49038014bf8a131e, type: 3}
   itemUsed: {fileID: 0}
   thoughtBubble: {fileID: 0}
   speechSound: {fileID: 0}
@@ -1408,7 +1419,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.57, y: 1.42}
+  m_Size: {x: 1.5704453, y: 1.42}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1453,7 +1464,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1158276266674575106, guid: f6b6877fe338b9844b7e2611742edcbd, type: 3}
+  m_Sprite: {fileID: -8390018941603478200, guid: 74784fa5ad96c4d2d9e45f16a1d28b2c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

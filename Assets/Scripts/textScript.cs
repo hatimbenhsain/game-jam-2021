@@ -12,42 +12,50 @@ using UnityEngine.SceneManagement;
 
 public class textScript : MonoBehaviour
 {
-	public Canvas canvas;
+    public Canvas canvas;
     public Canvas canvas1, canvas2;
-	public bool inZone; 
-	public string[] messages;
-	public int[] changeSpeaker;
-	public int currentMessage;
+    public bool inZone;
+    public string[] messages;
+    public int[] changeSpeaker;
+    public int currentMessage;
+
 
     //portraits
-	public GameObject portrait1;
+    public GameObject portrait1;
     public GameObject portrait2;
 
-    public GameObject itemUsed=null;
-    public GameObject thoughtBubble=null;
+    public int[] changePortrait1;
+    public int[] changePortrait2;
+    public int[] portrait1Which;
+    public int[] portrait2Which;
+    public Sprite[] portraits;
 
-     private TwoPlayerActionControl playerActionControl;
-     private float movementInput;
+    //MISC
+    public GameObject itemUsed = null;
+    public GameObject thoughtBubble = null;
+
+    private TwoPlayerActionControl playerActionControl;
+    private float movementInput;
 
 
-    public AudioClip speechSound=null;
+    public AudioClip speechSound = null;
     AudioClip typingSound;
 
-    public bool isNpc=true;
-    string spokenMessage="";
-    float lettersSpoken=0f;
-    public float textSpeed=0.6f;
-    public bool resolved=false;
+    public bool isNpc = true;
+    string spokenMessage = "";
+    float lettersSpoken = 0f;
+    public float textSpeed = 0.6f;
+    public bool resolved = false;
 
     void Awake()
     {
         playerActionControl = new TwoPlayerActionControl();
-        canvas=canvas1;
-        canvas.enabled=false;
-        canvas2.enabled=false;
+        canvas = canvas1;
+        canvas.enabled = false;
+        canvas2.enabled = false;
 
-        currentMessage =1;
-        int i=0;
+        currentMessage = 1;
+        int i = 0;
 
         //typingSound=canvas.GetComponent<AudioSource>().clip;
 
@@ -69,26 +77,34 @@ public class textScript : MonoBehaviour
         UpdateText();
     }
 
-    public void UpdateText(){
-        var mouse=Mouse.current;
-        for(int i=0;i<changeSpeaker.Length;i++){
-            if(changeSpeaker[i]==currentMessage){
-                if(canvas==canvas1){
-                    canvas=canvas2;
-                    canvas1.enabled=false;
-                    canvas.enabled=true;
+    public void UpdateText()
+    {
+        var mouse = Mouse.current;
+        for (int i = 0; i < changeSpeaker.Length; i++)
+        {
+            if (changeSpeaker[i] == currentMessage)
+            {
+                if (canvas == canvas1)
+                {
+                    canvas = canvas2;
+                    canvas1.enabled = false;
+                    canvas.enabled = true;
                     portrait1.transform.SetSiblingIndex(1);
                     portrait2.transform.SetSiblingIndex(3);
-                }else{
-                    canvas=canvas1;
-                    canvas2.enabled=false;
-                    canvas.enabled=true;
+                }
+                else
+                {
+                    canvas = canvas1;
+                    canvas2.enabled = false;
+                    canvas.enabled = true;
                     portrait1.transform.SetSiblingIndex(3);
                     portrait2.transform.SetSiblingIndex(1);
                 }
-                changeSpeaker[i]=0;
+                changeSpeaker[i] = 0;
                 break;
-            }else if (currentMessage == 1){
+            }
+            else if (currentMessage == 1)
+            {
                 canvas = canvas1;
                 canvas2.enabled = false;
                 canvas.enabled = true;
@@ -97,33 +113,42 @@ public class textScript : MonoBehaviour
             }
         }
 
-        if(mouse.leftButton.wasPressedThisFrame){
+        if (mouse.leftButton.wasPressedThisFrame)
+        {
             print("pressed");
-            if (lettersSpoken>=messages[currentMessage-1].Length && currentMessage<messages.Length){
+            if (lettersSpoken >= messages[currentMessage - 1].Length && currentMessage < messages.Length)
+            {
                 if (canvas.enabled)
                 {
                     currentMessage++;
                 }
-            	
-                lettersSpoken=0;
 
-            	if(currentMessage<=messages.Length){
-            		canvas.enabled=true;
-            	}
-            	else{
-            		canvas.enabled=false;
-            	}
-            	
-            }else if(currentMessage<messages.Length){
-                lettersSpoken=messages[currentMessage-1].Length;
-            }else{
-                canvas.enabled=false;
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1, LoadSceneMode.Single);
+                lettersSpoken = 0;
+
+                if (currentMessage <= messages.Length)
+                {
+                    canvas.enabled = true;
+                }
+                else
+                {
+                    canvas.enabled = false;
+                }
+
+            }
+            else if (currentMessage < messages.Length)
+            {
+                lettersSpoken = messages[currentMessage - 1].Length;
+            }
+            else
+            {
+                canvas.enabled = false;
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1, LoadSceneMode.Single);
             }
         }
 
-        if(messages.Length>0 && currentMessage>0){
-            lettersSpoken+=textSpeed;
+        if (messages.Length > 0 && currentMessage > 0)
+        {
+            lettersSpoken += textSpeed;
             // if(lettersSpoken<messages[currentMessage-1].Length && !canvas.GetComponent<AudioSource>().isPlaying){
             //     if(speechSound!=null){
             //         canvas.GetComponent<AudioSource>().clip=speechSound;
@@ -136,15 +161,29 @@ public class textScript : MonoBehaviour
             //     canvas.GetComponent<AudioSource>().Stop();
             //     Camera.main.gameObject.GetComponent<AudioSource>().volume=1f;
             // }
-            spokenMessage=messages[currentMessage-1].Substring(0,Mathf.Min(messages[currentMessage-1].Length,(int)Mathf.Ceil(lettersSpoken)));
-        	(canvas.GetComponentInChildren(typeof(Text)) as Text).text=spokenMessage;
+            spokenMessage = messages[currentMessage - 1].Substring(0, Mathf.Min(messages[currentMessage - 1].Length, (int)Mathf.Ceil(lettersSpoken)));
+            (canvas.GetComponentInChildren(typeof(Text)) as Text).text = spokenMessage;
         }
 
         // if(!canvas.enabled && canvas.GetComponent<AudioSource>().isPlaying){
         //     canvas.GetComponent<AudioSource>().Stop();
         // }
 
+        //update portraits
+        for (int i = 0; i < changePortrait1.Length; i++)
+        {
+            if (changePortrait1[i] == currentMessage)
+            {
+                portrait1.GetComponent<Image>().sprite = portraits[portrait1Which[i]];
+            }
+        }
 
+        for (int i = 0; i < changePortrait2.Length; i++)
+        {
+            if (changePortrait2[i] == currentMessage)
+            {
+                portrait2.GetComponent<Image>().sprite = portraits[portrait2Which[i]];
+            }
+        }
     }
-
 }

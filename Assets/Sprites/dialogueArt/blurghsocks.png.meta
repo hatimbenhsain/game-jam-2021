@@ -1,13 +1,61 @@
 fileFormatVersion: 2
-guid: f01c91f4159854f5da57d8b80735f0b2
+guid: 751bf172242ab4cd49038014bf8a131e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2858104593420605760
-    second: blurgh_0
+      213: -6413601428941455604
+    second: blurghsocks_0
   - first:
-      213: 3582432940155316215
-    second: blurgh_1
+      213: 591621629830723591
+    second: blurghsocks_1
+  - first:
+      213: -1608559285677826071
+    second: blurghsocks_2
+  - first:
+      213: -7302311922146185473
+    second: blurghsocks_3
+  - first:
+      213: 8009960198349171327
+    second: blurghsocks_4
+  - first:
+      213: 1156665651779993154
+    second: blurghsocks_5
+  - first:
+      213: 4738146215421141837
+    second: blurghsocks_6
+  - first:
+      213: -3418496884328947637
+    second: blurghsocks_7
+  - first:
+      213: 720036524077147301
+    second: blurghsocks_8
+  - first:
+      213: -6498609835912979877
+    second: blurghsocks_9
+  - first:
+      213: 2060552189127992789
+    second: blurghsocks_10
+  - first:
+      213: 9108634326801455674
+    second: blurghsocks_11
+  - first:
+      213: 452569640403273352
+    second: blurghsocks_12
+  - first:
+      213: 8290372242508939916
+    second: blurghsocks_13
+  - first:
+      213: -48806611072512986
+    second: blurghsocks_14
+  - first:
+      213: 7380456532197632901
+    second: blurghsocks_15
+  - first:
+      213: 8233169705172314968
+    second: blurghsocks_16
+  - first:
+      213: -7573618495942435994
+    second: blurghsocks_17
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -109,43 +157,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: blurgh_0
+      name: blurghsocks_0
       rect:
         serializedVersion: 2
-        x: 543
-        y: 248
-        width: 329
-        height: 422
+        x: 1125
+        y: 517
+        width: 739
+        height: 863
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c6a042e309f558d0800000000000000
-      internalID: -2858104593420605760
+      spriteID: c0fb1092b7f4ef6a0800000000000000
+      internalID: -6413601428941455604
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blurgh_1
+      name: blurghsocks_1
       rect:
         serializedVersion: 2
-        x: 1151
-        y: 325
-        width: 341
-        height: 351
+        x: 2339
+        y: 661
+        width: 886
+        height: 903
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f7ad9d47cb57b130800000000000000
-      internalID: 3582432940155316215
+      spriteID: 7087f7fdcbcd53800800000000000000
+      internalID: 591621629830723591
       vertices: []
       indices: 
       edges: []
