@@ -115,7 +115,7 @@ public class textScript5 : MonoBehaviour
                 changeSpeaker[i] = 0;
                 break;
             }
-            else if (currentMessage == 1) //sockoko
+            else if (currentMessage == 1) //washing machine
             {
                 canvas = canvas3;
                 canvas2.enabled = false;
