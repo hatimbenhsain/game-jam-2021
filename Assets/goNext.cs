@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class goNext : MonoBehaviour
 {
+    public AudioSource selectSound;
+    bool next = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +17,11 @@ public class goNext : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Return))
+        {
+            selectSound.Play();
+            next = true;
+        }
+        if (next==true && !selectSound.isPlaying)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
