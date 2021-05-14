@@ -580,7 +580,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 584021855}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d932547fa858a904f9022ef516b78b7e, type: 3}
@@ -1162,6 +1162,11 @@ MonoBehaviour:
   currentMessage: 0
   portrait1: {fileID: 1602442916}
   portrait2: {fileID: 2089285431}
+  changePortrait1: 
+  changePortrait2: 
+  portrait1Which: 
+  portrait2Which: 
+  portraits: []
   itemUsed: {fileID: 0}
   thoughtBubble: {fileID: 0}
   speechSound: {fileID: 0}
